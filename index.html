@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Kế hoạch Hành động Facebook Ads Tháng 6 - TDC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .stat-card {
+            background-color: #1f2937;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 1px solid #374151;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: #f59e0b;
+            box-shadow: 0 10px 15px -3px rgb(245 158 11 / 0.1), 0 4px 6px -2px rgb(245 158 11 / 0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 2rem;
+            bottom: -2rem;
+            width: 2px;
+            background-color: #374151;
+        }
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            height: 24px;
+            width: 24px;
+            background-color: #111827;
+            border: 4px solid #f59e0b;
+            border-radius: 9999px;
+            z-index: 10;
+        }
+        .animated-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12 animated-element">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-3">Plan Facebook Ads</h1>
+            <p class="text-lg md:text-xl text-amber-400 font-semibold">Tháng 6/2025 - The Design Council (TDC)</p>
+        </header>
+
+        <section id="overview" class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 animated-element">Mục Tiêu Chiến Lược Tháng 6</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+                <div class="stat-card animated-element">
+                    <p class="stat-number text-4xl md:text-5xl font-extrabold text-purple-400 mb-2" data-value="500">0</p>
+                    <h3 class="text-lg font-semibold text-gray-300">Mục Tiêu Doanh Thu (Triệu)</h3>
+                </div>
+                 <div class="stat-card animated-element" style="transition-delay: 100ms;">
+                    <p class="stat-number text-4xl md:text-5xl font-extrabold text-teal-400 mb-2" data-value="36">0</p>
+                    <h3 class="text-lg font-semibold text-gray-300">Mục Tiêu Bán Hàng (Gói)</h3>
+                    <p class="text-sm text-gray-400">5 Enhance & 31 Foundation</p>
+                </div>
+                <div class="stat-card animated-element" style="transition-delay: 200ms;">
+                    <p class="stat-number text-4xl md:text-5xl font-extrabold text-sky-400 mb-2" data-value="60">0</p>
+                    <h3 class="text-lg font-semibold text-gray-300">Ngân Sách (Triệu)</h3>
+                </div>
+                <div class="stat-card animated-element" style="transition-delay: 300ms;">
+                    <p class="stat-number text-4xl md:text-5xl font-extrabold text-green-400 mb-2" data-value="500">0</p>
+                    <h3 class="text-lg font-semibold text-gray-300">Mục Tiêu Tin Nhắn</h3>
+                </div>
+                <div class="stat-card animated-element" style="transition-delay: 400ms;">
+                    <p class="stat-number text-4xl md:text-5xl font-extrabold text-amber-400 mb-2" data-value="120">0</p>
+                    <h3 class="text-lg font-semibold text-gray-300">Mục Tiêu CPL (K)</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="mb-16 p-6 md:p-8 bg-gray-800 rounded-lg border border-gray-700 animated-element">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">Nhìn Lại Tháng 5 & Thách Thức</h2>
+                    <p class="text-gray-400 mb-4">
+                        Dữ liệu tháng 5 cho thấy hiệu suất tốt về số lượng tin nhắn (350), nhưng Chi phí trên mỗi Tin nhắn (CPL) là ~129k, cao hơn 8% so với ngưỡng mục tiêu.
+                    </p>
+                    <p class="text-gray-300 font-semibold">
+                        Thách thức chính cần giải quyết trong tháng 6 là tối ưu hóa mạnh mẽ hơn để giảm CPL, trong khi vẫn tăng trưởng về số lượng và đảm bảo chất lượng chuyển đổi.
+                    </p>
+                </div>
+                <div>
+                    <div class="chart-container">
+                        <canvas id="cplChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="budget" class="mb-16 p-6 md:p-8 bg-gray-800 rounded-lg border border-gray-700 animated-element">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="chart-container h-[300px] md:h-[350px]">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">Phân Bổ Ngân Sách</h2>
+                    <p class="text-gray-400 mb-4">
+                        Ngân sách 60 triệu được phân bổ một cách chiến lược, tập trung vào chuyển đổi nhưng vẫn đảm bảo nguồn lực cho việc tiếp thị lại và thử nghiệm để tối ưu hiệu quả.
+                    </p>
+                     <ul class="space-y-3">
+                        <li class="flex items-center text-lg"><span class="h-4 w-4 rounded-full bg-amber-400 mr-4"></span>Conversion Ads: <span class="font-bold ml-auto">80%</span></li>
+                        <li class="flex items-center text-lg"><span class="h-4 w-4 rounded-full bg-amber-600 mr-4"></span>Remarketing: <span class="font-bold ml-auto">12%</span></li>
+                        <li class="flex items-center text-lg"><span class="h-4 w-4 rounded-full bg-amber-800 mr-4"></span>A/B Testing: <span class="font-bold ml-auto">8%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="roadmap" class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 animated-element">Lộ Trình Hành Động Tháng 6</h2>
+            <div class="relative max-w-3xl mx-auto">
+                <div class="timeline-item relative pl-12 pb-12 animated-element">
+                    <div class="timeline-dot"></div>
+                    <p class="text-sm font-semibold text-amber-400">Tuần 1: 01 – 07/06</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Xây Dựng Nhận Diện & Thử Nghiệm</h3>
+                    <p class="text-gray-400 mb-2">Chạy quảng cáo cho bài **So sánh gói F & E (M1)** và **Bài Tip DFB (V1)** để xây dựng tệp và bắt đầu A/B test.</p>
+                    <p class="font-bold text-green-400">KPI: ~70 tin nhắn</p>
+                </div>
+                <div class="timeline-item relative pl-12 pb-12 animated-element">
+                    <div class="timeline-dot"></div>
+                    <p class="text-sm font-semibold text-amber-400">Tuần 2: 08 – 14/06</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Tạo Uy Tín & Thu Hút Lead</h3>
+                    <p class="text-gray-400 mb-2">Dồn lực quảng bá **Giới thiệu Workshop (E2)** và tiếp thị lại bằng **Recap WS (E4)** để xây dựng uy tín, thu lead chất lượng.</p>
+                    <p class="font-bold text-green-400">KPI: ~120 tin nhắn</p>
+                </div>
+                <div class="timeline-item relative pl-12 pb-12 animated-element">
+                     <div class="timeline-dot"></div>
+                    <p class="text-sm font-semibold text-amber-400">Tuần 3: 15 – 21/06</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Tăng Tốc & Thúc Đẩy Chuyển Đổi</h3>
+                    <p class="text-gray-400 mb-2">Tung quảng cáo **Video dài Gói Enhance (M2)** - ad chủ lực của tháng, kết hợp remarketing bằng **Kêu gọi FBD-04 (E5)**.</p>
+                    <p class="font-bold text-green-400">KPI: ~180 tin nhắn</p>
+                </div>
+                <div class="timeline-item relative pl-12 pb-12 animated-element">
+                     <div class="timeline-dot"></div>
+                    <p class="text-sm font-semibold text-amber-400">Tuần 4: 22 – 30/06</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Tối Ưu Hóa & "Vớt" Khách Hàng</h3>
+                    <p class="text-gray-400 mb-2">Chạy quảng cáo **So sánh gói E vs. Môn lẻ** và **Hỏi đáp (M5, M6)** để remarketing tổng lực, giải quyết băn khoăn của khách hàng.</p>
+                    <p class="font-bold text-green-400">KPI: Đạt tổng 500 tin nhắn</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="content-strategy" class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 animated-element">Chiến Lược Nội Dung Hỗ Trợ (TikTok/Reels)</h2>
+            <p class="text-center text-gray-400 max-w-3xl mx-auto mb-10 animated-element">Để xây dựng cộng đồng và giảm chi phí quảng cáo dài hạn, các video ngắn sẽ xoay quanh 5 nhóm chủ đề cốt lõi.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <div class="stat-card text-center animated-element">
+                    <p class="text-5xl mb-3">🎓</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Kiến thức & Tips</h3>
+                </div>
+                <div class="stat-card text-center animated-element" style="transition-delay: 100ms;">
+                    <p class="text-5xl mb-3">🎬</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Hậu trường & Thương hiệu</h3>
+                </div>
+                 <div class="stat-card text-center animated-element" style="transition-delay: 200ms;">
+                    <p class="text-5xl mb-3">💡</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Truyền cảm hứng</h3>
+                </div>
+                <div class="stat-card text-center animated-element" style="transition-delay: 300ms;">
+                    <p class="text-5xl mb-3">🎯</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Tương tác & Bắt trend</h3>
+                </div>
+                <div class="stat-card text-center animated-element" style="transition-delay: 400ms;">
+                    <p class="text-5xl mb-3">🏆</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Case study & Thành công</h3>
+                </div>
+                 <div class="stat-card text-center animated-element" style="transition-delay: 500ms;">
+                    <p class="text-5xl mb-3">📈</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Đo lường & Tối ưu</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 animated-element">Đề Xuất Tối Ưu & Mở Rộng</h2>
+            <p class="text-center text-gray-400 max-w-3xl mx-auto mb-10 animated-element">Ngoài các hoạt động marketing, cần thực hiện các cải tiến kỹ thuật để tối đa hóa hiệu quả chuyển đổi.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                 <div class="stat-card text-center animated-element">
+                    <p class="text-5xl mb-3">🚀</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Tối ưu Tốc độ Web</h3>
+                    <p class="text-gray-400 text-sm">Sử dụng DNS của Cloudflare để tăng tốc độ tải trang, cải thiện trải nghiệm người dùng và SEO.</p>
+                </div>
+                <div class="stat-card text-center animated-element" style="transition-delay: 100ms;">
+                    <p class="text-5xl mb-3">📝</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Tăng Chuyển đổi Trang Giá</h3>
+                     <p class="text-gray-400 text-sm">Gắn form tư vấn trực tiếp lên trang Pricing để bắt trọn khách hàng tiềm năng ngay khi họ quan tâm nhất.</p>
+                </div>
+                 <div class="stat-card text-center animated-element" style="transition-delay: 200ms;">
+                    <p class="text-5xl mb-3">📊</p>
+                    <h3 class="text-lg font-bold mb-1 text-white">Mở rộng Dữ liệu Đa kênh</h3>
+                    <p class="text-gray-400 text-sm">Cài đặt Pixel (LinkedIn, TikTok) và nghiên cứu sâu hơn dataset để hiểu rõ hành vi khách hàng đa kênh.</p>
+                </div>
+            </div>
+            <div class="text-center mt-10 animated-element" style="transition-delay: 300ms;">
+                <a href="https://docs.google.com/presentation/d/162zOYgEVyIB_N09CG2Caa2cVkRuoe6DfSs5E8_ZWUxc/edit#slide=id.p" target="_blank" rel="noopener noreferrer" class="inline-block bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-amber-400 transform hover:-translate-y-1 transition-all duration-300">
+                    Xem Đề Xuất Chi Tiết
+                </a>
+            </div>
+        </section>
+
+        <section id="contact-form" class="mb-16">
+            <div class="max-w-xl mx-auto p-6 md:p-8 bg-gray-800 rounded-lg border border-gray-700 animated-element">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-white">Góc Tâm Sự</h2>
+                <p class="text-center text-gray-400 max-w-3xl mx-auto mb-8">Để lại thông tin, Thái sẽ liên hệ để giải thích chi tiết.</p>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="hovaten" class="sr-only">Họ và Tên</label>
+                        <input type="text" name="hovaten" id="hovaten" autocomplete="name" required class="block w-full bg-gray-700 border-gray-600 text-white rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Họ và Tên">
+                    </div>
+                    <div>
+                        <label for="sodienthoai" class="sr-only">Số Điện Thoại</label>
+                        <input type="tel" name="sodienthoai" id="sodienthoai" autocomplete="tel" required class="block w-full bg-gray-700 border-gray-600 text-white rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Số Điện Thoại">
+                    </div>
+                    <div>
+                        <button type="submit" id="submitButton" class="w-full bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-amber-400 transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                            Gửi Thông Tin
+                        </button>
+                    </div>
+                </form>
+                <div id="formMessage" class="mt-4 text-center"></div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-700 animated-element">
+            <p class="text-gray-500">Bản quyền © 2025 The Design Council. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+    
+    <a href="https://zalo.me/0909554174" target="_blank" rel="noopener noreferrer" title="Chat Zalo với Thái" class="fixed right-5 top-1/2 -translate-y-1/2 z-50 group">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/2048px-Icon_of_Zalo.svg.png" alt="Zalo Icon" class="w-16 h-16 rounded-full shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+    </a>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            Chart.defaults.color = '#9ca3af';
+            Chart.defaults.borderColor = '#374151';
+
+            const cplChartCtx = document.getElementById('cplChart').getContext('2d');
+            new Chart(cplChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Chi phí/Tin nhắn (CPL)'],
+                    datasets: [{
+                        label: 'Thực tế Tháng 5',
+                        data: [129285],
+                        backgroundColor: '#71717a',
+                        borderColor: '#a1a1aa',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        barPercentage: 0.5,
+                        categoryPercentage: 0.5
+                    }, {
+                        label: 'Mục tiêu Tháng 6',
+                        data: [120000],
+                        backgroundColor: '#f59e0b',
+                        borderColor: '#fbbf24',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        barPercentage: 0.5,
+                        categoryPercentage: 0.5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 100000,
+                            grid: {
+                                color: '#374151'
+                            },
+                            ticks: {
+                                color: '#d1d5db',
+                                callback: function(value) {
+                                    return (value / 1000) + 'K';
+                                }
+                            }
+                        },
+                        x: {
+                           grid: {
+                                display: false
+                           }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#d1d5db'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'So sánh CPL Thực tế & Mục tiêu (Đơn vị: VNĐ)',
+                            color: '#f9fafb',
+                            font: {
+                                size: 16
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y.toLocaleString('vi-VN') + ' VNĐ';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const budgetChartCtx = document.getElementById('budgetChart').getContext('2d');
+            new Chart(budgetChartCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Conversion Ads', 'Remarketing', 'A/B Testing'],
+                    datasets: [{
+                        label: 'Phân bổ Ngân sách',
+                        data: [48000000, 7200000, 4800000],
+                        backgroundColor: [
+                            '#f59e0b',
+                            '#d97706',
+                            '#b45309'
+                        ],
+                        borderColor: '#1f2937',
+                        borderWidth: 4,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                           display: false
+                        },
+                         tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += (context.parsed / 60000000 * 100).toFixed(0) + '% (' + context.parsed.toLocaleString('vi-VN') + ' VNĐ)';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const animatedElements = document.querySelectorAll('.animated-element');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        
+                        const statNumbers = entry.target.querySelectorAll('.stat-number');
+                        statNumbers.forEach(statNumber => {
+                            animateValue(statNumber, 0, parseInt(statNumber.dataset.value), 2000);
+                        });
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            function animateValue(obj, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString('vi-VN');
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+
+            const form = document.getElementById('contactForm');
+            const submitButton = document.getElementById('submitButton');
+            const formMessage = document.getElementById('formMessage');
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyf5chE1ldwLh3CtIh8yHMhSlimTFArszwpPZSXyZx5RJjSQnbI0ThqsmoWBhsB7rElHA/exec';
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                
+                if (SCRIPT_URL === 'URL_CUA_BAN_O_DAY') {
+                    formMessage.textContent = 'Lỗi cấu hình: URL chưa được thiết lập.';
+                    formMessage.className = 'mt-4 text-center text-red-400';
+                    return;
+                }
+
+                submitButton.disabled = true;
+                formMessage.textContent = 'Đang gửi...';
+                formMessage.className = 'mt-4 text-center text-amber-400';
+
+                fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Lỗi mạng: ${response.statusText}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.result === 'success') {
+                            formMessage.textContent = 'Gửi thông tin thành công! Thái sẽ liên hệ với bạn sớm.';
+                            formMessage.className = 'mt-4 text-center text-green-400';
+                            form.reset();
+                        } else {
+                            throw new Error(data.error || 'Có lỗi không xác định từ máy chủ.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        formMessage.textContent = 'Gửi thất bại! Vui lòng thử lại sau.';
+                        formMessage.className = 'mt-4 text-center text-red-400';
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
